@@ -1,0 +1,184 @@
+#ZING ZONG SIMULATOR 2020
+import time
+import random
+#%% funktioner + intro
+def intro():
+    print("Zing Zong: HAHA JEG FANGER DIGGGGG")
+    time.sleep(1)
+    print("dig: *løber væk*")
+    time.sleep(1)
+    print("zing zong: DU KAN IKKE FLYGTE f0r MIggggggggg!!")
+    time.sleep(1)
+    print("dig: *stopper*")
+    time.sleep(1)
+    print("zing zong: vent... er det... en dio pose?????")
+    time.sleep(1)
+    print("dig: *aktiverer Gold Experience Requiem* MUDA MUDA MUDA")
+    time.sleep(1)
+    print("zing zong: undskyyyyyyyld pleaseeeee stooooooppp")
+    time.sleep(1)
+    print("dig: haha kono giorno giovanna yume ga aru")
+    time.sleep(1)
+    print("*BING_BONG ENTERED THE CHAT*")
+    time.sleep(1)
+    print("bing_bong (OWNER): jeg kicker jer fra chatten hvis i ikke stopper")
+    time.sleep(1)
+    print("xx_f0rtnite_M0NSt3RR_xx: yo yo yozoooooo hvem vil playe noget foetoeeee????")
+    time.sleep(1)
+    print("*4TH_WALL_NUT HAS ENTERED THE CHAT*")
+    time.sleep(1)
+    print("4th_wall_nut (ADMIN): det her skulle være en simulator")
+    time.sleep(1)
+    print("bing_bong (OWNER): jeg kan ikke huske jeg llavede dig til admin")
+    time.sleep(1)
+    print("BagelMaster0 (DONATOR): hey hey så i mig i BagelKonkurencen??????????????????++++++ bagels er lækre")
+    time.sleep(1)
+    print("bing_bong (OWNER): @paulbenny7 dit navn er meget forvirrende så jeg ændrer det lige tilbage til paulbenny7")
+    time.sleep(1)
+    print("*BING_BONG TRANSFERED OWNERSHIP TO 4TH_WALL_NUT*")
+    time.sleep(1)
+    print("bing_bong: tf det gjorde jeg ikkkeeeee")
+    time.sleep(1)
+    print("*4TH_WALL_NUT CLOSED THE SERVER*")
+    time.sleep(1)
+    print("nu skal spillet gå i gang endelig. (wtf sker der med alex??)")
+    pass
+
+def titleScreen():
+    print("_"*50)
+    print()
+    print()
+    print("ZING ZONG SIMULATOR 2020".center(50))
+    print()
+    print()
+    print("_"*50)
+
+def multipleChoice(choice1, choice2, choice3):
+    print("VALG!")
+    print("1:", choice1)
+    print("2:", choice2)
+    print("3:", choice3)
+    while True:
+        print("hvad vælger du (1, 2 eller 3)")
+        PC = input(">>> ")
+        if PC == '1' or PC== '2' or PC=='3':
+            return int(PC)
+        else:
+            print("prøv igen!")
+def death():
+    print("du døde vil du starte forfra?")
+    while True:
+        PC = input(">>> ")
+        if PC == "ja":
+            return True
+            break
+        elif PC == "nej":
+            return False
+            break
+        else:
+            print("prøv igen")
+def win(ending):
+    print("du vandt med", ending, "slutningen vil du starte forfra og prøve at få en anden?")
+    while True:
+        PC = input(">>> ")
+        if PC == "ja":
+            return True
+            break
+        elif PC == "nej":
+            return False
+            break
+        else:
+            print("prøv igen")
+            
+#%% functions for Zing Zong game
+def zzTimeDeath():
+    death = random.randint(1, 2)
+    if death == 1:
+        print("Player dukker frem med Bing Bong bag sig")
+        print("Bing Bong siger 'din tiDD er kommeTT Zing ZonGG' før du bliver dræbt")
+    if death == 2:
+        print("Player dukker frem med en stand bag sig")
+        print("umuligt! hvordan fik Player en stand??")
+
+    
+def zzRealm(techniques):
+    zzInv = techniques
+    zzTime = 60
+    if "narutoRun" in zzInv:
+        zzTime*=2
+    print("du går rundt i en mørk skov")
+    time.sleep(3)
+    print("der er tre veje")
+    c1 = multipleChoice("lige ud", "højre", "venstre")
+    if c1 == 1:
+        zzTime-=10
+        if zzTime <= 0:
+            zzTimeDeath()
+        print("du finder en grotte")
+        c2 = multipleChoice("gå ind i grotten", "gå videre af skov-vejen", "gå tilbage de tre veje")
+        if c2 == 1:
+            print("du går længere og længere ind i grotten i håb af at finde Player")
+            print("men i stedet ser du Bing Bong alteret")
+            print("du kan mærke din energi blive suget ud af din krop")
+        if c2 == 2:
+            print("du kommer går videre af skovstien")
+            print("du kan se Player stå alene der")
+            print("Zing Zong dukker op og siger 'godt job, du har passeret min test' før alting langsomt går sort")
+            return "w"
+        
+        
+        
+    
+#%% main loop
+
+#intro()
+titleScreen()
+restart = True
+while restart:
+    inventory = []
+    techniques = []
+    print("Du går rundt i en mørk skov")
+    time.sleep(3)
+    #cross
+    print("du ser tre veje")
+    c1 = multipleChoice("lige ud", "højre", "venstre")
+    if c1 == 1:
+        print("du finder en grotte")
+        c2 = multipleChoice("gå ind i grotten", "gå videre af skov-vejen", "gå tilbage til de tre veje")
+        if c2 == 1:
+            print("du går ind i grotten")
+            time.sleep(1)
+            print("efter cirka 15 minutters gå-tur gennem grotten ser du et alter")
+            c3 = multipleChoice("gå hen til alteret", "løb ud af grotten", "gør intet")
+            if c3 == 1:
+                print("du går hen til alteret og prøver at analysere det")
+                time.sleep(1)
+                print("pludselig føler du unaturlige kræfter flyde ind i dig")
+                print("en skabning dukker op der ligner et Bing logo med nogle øjne, ben og arme")
+                print("skabningen synger pludselig 'Bong Bing Boo, Bing Bong Bing, Bing Bong Bingly Bungly Boo'")
+                win("Bing Bong")
+            if c3 == 2:
+                print("Zing Zong dukker frem og dræber dig")
+                restart =death()
+            if c3 == 3:
+                print("du venter indtil faren er ovre")
+                restart = win("den fredelige")
+            
+        if c2 == 2:
+            print("du går ind af en blindgyde")
+            print("Zing Zong dukker op og begynder at løbe efter dig")
+            print("Zing Zong stopper hurtigt op og tilbyder at du kan hjælpe ham")
+            print("men først skal du gå igennem en test så han kan se dit potentiale")
+            zzResult = zzRealm(techniques)
+            if zzResult == 'w':
+                win("Zing Zong")
+            
+        if c2 == 3:
+            print("du går tilbage af den samme vej du kom")
+            time.sleep(1)
+            print("pludselig kan du se en rød figur med solbriller på")
+            time.sleep(1)
+            print("den siger 'ZING ZONG er herrrrr' før du falder om og dør")
+            restart = death()
+    elif c1 == 2:
+        pass
